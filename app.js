@@ -5,7 +5,9 @@ const data = require('./weather.json')
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-const key = "Enter your key"
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiY3M1NjEtc2UiLCJwYXNzIjoiTGV0TWVJbiJ9.8f2w5c4XgSdIPjfLLKsbNGE9QV8aOnN6SeJoldv7FSU"
+const expiry = new Date()
+expiry.setDate(expiry.getDate() + 7);
 
 
 app.use(function (req, res, next) {
